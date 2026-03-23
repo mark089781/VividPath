@@ -422,7 +422,7 @@ input {
 
 .Users-Card {
   background:var(--secondary-bg);
-  width: 350px;
+  width: 400px;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
@@ -437,6 +437,7 @@ input {
   font-family:"Nunito", sans-serif;
   font-size: 12px;
   font-weight: 600;
+  width: 350px;
 }
 
 .remember-me {
@@ -445,22 +446,64 @@ input {
   font-size: 12px;
   display: flex;
   justify-content: center;
-  margin-right: 245px;
+  margin-right: 290px;
 }
 
 .Login-button {
   background: var(--primary);
   color: #fff;
   padding: 10px;
-  width: 350px;
+  width: 400px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
+.Login-buttonss {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.loggin-formm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 435px;
+  padding-top: 10px;
+}
+
+.form-cardd {
+  background:var(--secondary-bg);
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.logIn-formm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 435px;
+}
+
 .Login-button:hover {
   transform: translateY(3px);
   box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.register-foots {
+  margin-bottom: 160px;
+  margin-top: 7px;
+  font-family:"Nunito", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  padding-left: 130px;
 }
 
 .register-foot {
@@ -469,6 +512,8 @@ input {
   font-family:"Nunito", sans-serif;
   font-size: 10px;
   font-weight: 500;
+  display: flex;
+  padding-left: 150px;
 }
 
 .regiss {
@@ -497,6 +542,7 @@ input {
   display: flex;
   gap: 13px;
   flex-direction: column;
+
 }
 
 .frame-font-card {
@@ -504,7 +550,7 @@ input {
   box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
   border-radius: 10px;
   width: 240px;
-  padding: 5px;
+  padding-left: 10px;
   display: flex;
 }
 
@@ -695,4 +741,18 @@ ul{
   flex: 1 1 100px;
 }
   
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nabvar-line {
+  display: flex;
+  justify-content: center;
+  padding-left: 695px;
+  font-size: 16px;
+  font-weight: 550;
 }

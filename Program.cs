@@ -1,7 +1,33 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+// Session
+builder.Services.AddAuthentication("UserSession")
+    .AddCookie("UserSession", options =>
+    {
+        options.LoginPath = "/Home/LogIn";
+        options.AccessDeniedPath = "/Home/Main";
+        options.ExpireTimeSpan = TimeSpan.FromHours(1);
+
+        options.SlidingExpiration = false;
+        options.Cookie.IsEssential = true;
+        options.Cookie.HttpOnly = true;
+        options.Cookie.MaxAge = options.ExpireTimeSpan;
+    });
+
+builder.Services.AddAuthorization();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(1); // session expires after inactivity
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -14,8 +40,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
 
+app.UseSession();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();

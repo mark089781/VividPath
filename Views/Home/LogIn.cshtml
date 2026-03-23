@@ -12,17 +12,20 @@
             <p class="Login">Login</p>
             <p class="Login-desc">Welcome to Where Creativity Finds Its Path.</p>
             </div>
-
-            <div class="Users-Card">
+            <div class="form-cardd">
+            <form id="logInForm">
                 <div class="input-group">          
-                <label>Username</label>  
-                <input type="text" name="username" required />
-            </div>
-
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" name="password" required />
+                    <label>Email</label>  
+                    <input id="email" type="text" name="email" required />
                 </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" name="password" required />
+                </div>
+            
+            </form>
+            </div>
         </div>
             
     
@@ -32,10 +35,11 @@
                 <label for="remember">Remember Me</label>
         </div>  
     </div>
-        <button class="Login-button">Login</button>
-        <p class="register-foot">
-            New User? 
-            <a asp-controller="Home" asp-action="Register" class="regiss">Register</a>
-        </p>
-    </div>
+        <div class="logIn-formm">
+            <button form="logInForm" type="submit" class="Login-buttonss">Login</button>
+            <p class="register-foot">
+                New User? 
+                <a asp-controller="Home" asp-action="Register" class="regiss">Register</a>
+            </p>
+       </div> 
 </div>

@@ -1,5 +1,8 @@
 using System.Diagnostics;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using VividPath.DTO;
 //using VividPath.Models;
 
 namespace VividPath.Controllers;
@@ -42,5 +45,29 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public async Task<IActionResult> LogIn([FromBody] LogInDto loginDto)
+    {
+
+        // CALL THE USER TABLE HERE
+
+        var claims = new List<Claim>
+        {
+            new Claim("Email", loginDto.Email)
+        };
+
+        var identity = new ClaimsIdentity(claims, "UserSession");
+        var principal = new ClaimsPrincipal(identity); 
+
+        await HttpContext.SignInAsync("UserSession", principal);
+        return Ok( new { redirect = "/Home/Main", isLoggedIn = true});
+    }
   
+    [HttpPost]
+    public async Task<IActionResult> LogOut()
+    {
+        await HttpContext.SignOutAsync("UserSession");
+        return Ok();
+    }
 }
