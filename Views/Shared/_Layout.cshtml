@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var page = ViewData["Page"]?.ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,15 +12,15 @@
 </head>
 <body>
 
-    <nav>
+    <nav class="@(page == "login" || page == "register" || page == "Learn" ? "hide" : "")">
        <div class="Vivid">
             <img src="~/img/Vivid.image.png" asp-append-version="true" alt="VividPath Logo">
        </div>
         <ul>
-            <li><a href="Home">Home</a></li>
-            <li><a href="Home">Course</a></li>
-            <li><a href="Home">About</a></li>
-            <li><button class="primary-button">Log in</button></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#about">About</a></li>
+            <li><button class="primary-button"><a asp-controller="Home" asp-action="LogIn">Log in</a></button></li>
         </ul>
     </nav>
 
@@ -24,13 +28,23 @@
         @RenderBody() <!-- Kumbaga, cinocopy paste dito ang contents o ang nilalaman ng Home/ folder, kung saan ang Main.cshtml ay lalabas dito -->
     </main>
 
-
     <footer>
-    
+      <div class="@(page == "Learn" ? "hide" : "")">
+        <div class="footangina">
+            <div class="foot-card">
+                <div class="inner-fonts">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#course">Course</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="Home">Terms and Conditions</a></li>
+                </div>
+            </div>
+        </div>
+     </div>
     </footer>
-    
+ 
 
     <!-- This points to ~/js/site.js file -->
     <script src="~/js/site.js"></script>
 </body>
-</html>
+</h

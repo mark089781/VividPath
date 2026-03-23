@@ -18,6 +18,29 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult LogIn()
+    {
+        return View();
+    }
 
+    public IActionResult Register()
+    {
+        return View();
+    }
+
+    public IActionResult Profile()
+    {
+        return View();
+    }
+
+     public IActionResult Course()
+    {
+        return View();
+    }
+
+     public IActionResult Learn()
+    {
+        return View();
+    }
   
 }

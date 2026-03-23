@@ -1,28 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    ViewData["Page"] = "home";
 }
-
-
-<!--
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VividPath</title>
-
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
-<body>
-</body>
-</html>
-
-
-**** Hindi mo na to kailangan dito, kasi as I have said cinocopy paste lang lahat ng contents nito duon sa _Layout.cshtml
-
--->
-
 
 <div class="Text">
     <div class="content">
@@ -30,7 +9,7 @@
             <p class="headline">Find your Creative <span class="highlight headline">Direction</span></p>
             <p class="description">
                 VividPath is a beginner-friendly platform that introduces aspiring artists to the fundamentals of visual art. 
-                Through clear and simple tutorials, learners explore the 7 elements of art—line, shape, color, value, form, texture, and space to build a strong foundation in artistic expression. 
+                Through clear and simple tutorials, learners explore the 7 elements of art-line, shape, color, value, form, texture, and space to build a strong foundation in artistic expression. 
                 VividPath makes learning art approachable, fun, and hands-on, helping beginners confidently develop their skills.
             </p>
         </div>
@@ -46,7 +25,7 @@
 
 </div>
 
-<div class="second-section">
+<div id="course" class="second-section">
     <p class="Head">7 Element of Art</p>
 
     <div class="Cardcontainer"> 
@@ -55,7 +34,7 @@
                 <p class="head">LINES</p>
                 <p class="desc">A Mark connecting two points</p>
 
-                <div class="card2">
+                <div class="card2" id="card2">
                     <div class="learnbox">
                         <p>Learn</p>
                     </div>
@@ -87,7 +66,7 @@
                 <p class="head">SHAPE</p>
                 <p class="desc">A closed line that forms a flat figure</p>
 
-                <div class="card2">
+                <div class="card2" id="card3">
                     <div class="learnbox">
                         <p>Learn</p>
                     </div>
@@ -213,7 +192,7 @@
 <div class="Cardcontainer"> 
     <div class="Card">
         <div class="innercont">
-            <p class="head  ">VALUE</p>
+            <p class="head">VALUE</p>
             <p class="desc">The lightness or darkness of a color</p>
 
             <div class="card2">
@@ -238,4 +217,38 @@
 
 </div> 
 
+<div class="third-section">
+    <p class="Head">Our Mission</p>
+    <div class="CARD3">
+        <div class="font-cont">
+
+            <div class="font-cont1">
+                <p class="mission1">Beginner Design Tutorials</p>
+                <p class="mission2">Our mission at VividPath is to make learning design simple, accessible, and inspiring for everyone. Through our library of tutorials, we focus on teaching the essential elements of art—line, shape, color, texture, form, space, and value in a clear and engaging way. Each lesson is carefully structured to help beginners understand fundamental concepts, build confidence, and grow their creativity step by step.</p>
+            </div>
+
+            <div class="font-cont1">
+                <p class="mission1">Tools to Build Your Creativity</p>
+                <p class="mission2">VividPath provides a variety of tools designed to help learners explore and develop their creativity with confidence. These tools support the learning of the 7 elements of art by allowing users to practice, experiment, and apply what they have learned in a simple and engaging way. Aligned with our mission to make design accessible and easy to understand, each feature is created to guide beginners step by step as they build their skills and express their ideas creatively.</p>
+            </div>
+
+            <div class="font-cont1">
+                <p class="mission1">Learn Design the Easy Way</p>
+                <p class="mission2">At VividPath, we believe that learning design should be simple, engaging, and accessible to everyone. Our tutorials guide beginners step by step through the 7 elements of art, breaking down complex concepts into easy-to-understand lessons. By focusing on clarity and practical application, we help learners build a strong foundation in design while fostering creativity and confidence along the way.</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="about" class="fourth-section">
+    <p class="Head">About Us</p>
+         <div class="img-container">
+             <div class="img">
+                <img src="~/img/logows.png" asp-append-version="true" alt="color">
+             </div>
+             <p class="disck">VividPath is a beginner-friendly website created to help people learn the basics of art and design in a simple and fun way. Our goal is to guide learners step by step so they can understand important design principles like balance, rhythm, unity, and movement.
+                                                                                                                                                                                                                                                                                                At VividPath, we believe that everyone can be creative. Through easy tutorials and clear lessons, we help beginners start their journey in design and build their creative skills with confidence.</p>
+         </div>
+</div>
 

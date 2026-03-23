@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Page"] = "login";
+
+}
+
+<div class="Mother-logIn">
+        <div class="login-container">
+            <p class="Login-Title">Vivid<span class="Color-title">Path</span></p>
+
+            <div class="logindesc-card">
+            <p class="Login">Login</p>
+            <p class="Login-desc">Welcome to Where Creativity Finds Its Path.</p>
+            </div>
+
+            <div class="Users-Card">
+                <div class="input-group">          
+                <label>Username</label>  
+                <input type="text" name="username" required />
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required />
+                </div>
+        </div>
+            
+    
+        <div class="remember-me">
+            <div class="remem">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember Me</label>
+        </div>  
+    </div>
+        <button class="Login-button">Login</button>
+        <p class="register-foot">
+            New User? 
+            <a asp-controller="Home" asp-action="Register" class="regiss">Register</a>
+        </p>
+    </div>
+</div>
